@@ -260,3 +260,8 @@ create database hue DEFAULT CHARACTER SET utf8 ;<br/>
 grant all on hue.* to 'hue'@'%' identified by 'hue';<br/>
 flush privileges;<br/>
 ====================<br/>
+
+# 17. Cloudera Manager 패키지 설치
+- pssh -h /root/allnodes "yum -y install cloudera-manager-daemons"<br/>
+- pssh -h /root/allnodes "yum -y install cloudera-manager-agent"<br/>
+- clush -B -a "rpm -qa | grep cloudera"<br/>
