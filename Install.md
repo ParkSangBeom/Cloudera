@@ -14,7 +14,7 @@ GATEWAY=172.16.31.1<br/>
 NETMASK=255.255.255.0<br/>
 ====================<br/>
 
-### 재시작
+### 네트워크 재시작
 - systemctl restart network<br/>
 
 # 3. SSH Key
@@ -47,7 +47,7 @@ enabled=1<br/>
 ====================<br/>
 - yum clean all<br/>
 
-### Http 데몬 설치
+# 4. Http 데몬 설치
 - yum -y install httpd
 - vi /etc/httpd/conf/httpd.conf<br/>
 ====================<br/>
