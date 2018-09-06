@@ -85,3 +85,5 @@ SELINUX=disabled<br/>
 - mkdir /var/www/html/Pssh<br/>
 - cd /var/www/html/Pssh<br/>
 - python setup.py install<br/>
+
+# 8. 다른 네트워크 세팅
