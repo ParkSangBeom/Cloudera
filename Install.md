@@ -6,13 +6,14 @@ Centos7.2 <br/>
 - vi /etc/sysconfig/network-scripts/ifcfg-ensXXX <br/>
 
 ### 설정
-==========<br/>
+====================<br/>
 BOOTPROTO=none<br/>
 ONBOOT=yes<br/>
 IPADDR=172.16.31.180<br/>
 GATEWAY=172.16.31.1<br/>
 NETMASK=255.255.255.0<br/>
-==========<br/>
+====================<br/>
+
 ### 재시작
 - systemctl restart network<br/>
 
