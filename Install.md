@@ -161,3 +161,6 @@ root hard nofile 64000<br/>
 ====================<br/>
 - pscp -h /root/allnodes /etc/default/grub /etc/default/grub<br/>
 - pssh -h /root/allnodes "grub2-mkconfig -o /boot/grub2/grub.cfg"<br/>
+
+### 확인
+- cat /proc/meminfo<br/>
