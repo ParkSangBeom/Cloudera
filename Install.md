@@ -17,12 +17,14 @@ NETMASK=255.255.255.0<br/>
 
 # 3. SSH Key
 ### Key생성
-ssh-keygen<br/>
+- ssh-keygen<br/>
 
 ### Key복사
-for IP in {180..182}; do echo -n "$IP -> "; ssh-copy-id -i ~/.ssh/id_rsa.pub 172.16.31.$IP; done<br/>
+- for IP in {180..182}; do echo -n "$IP -> "; ssh-copy-id -i ~/.ssh/id_rsa.pub 172.16.31.$IP; done<br/>
 
 # 4. Yum local repository 구축
-### DVD Mount
-mkdir /media/cdrom<br/>
-mount /dev/cdrom /media/cdrom/<br/>
+### Centos Package 파일준비
+- mkdir -p /var/www/html/Centos7.2<br/>
+- mkdir /media/cdrom<br/>
+- mount /dev/cdrom /media/cdrom/<br/>
+- cp -r /media/cdrom/* /var/www/html/Centos7.2/<br/>
