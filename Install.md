@@ -28,6 +28,7 @@ NETMASK=255.255.255.0<br/>
 - mkdir /media/cdrom<br/>
 - mount /dev/cdrom /media/cdrom/<br/>
 - cp -r /media/cdrom/* /var/www/html/Centos7.2/<br/>
+- umount /dev/cdrom
 
 ### 기존 repo파일 백업
 - mkdir /etc/yum.repos.d/.bak<br/>
