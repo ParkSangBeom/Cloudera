@@ -1,7 +1,7 @@
-# 1.OS설치
+# 1. OS설치
 - Centos7.2 <br/>
 
-# 2.Network설정
+# 2. Network설정
 ### 파일
 vi /etc/sysconfig/network-scripts/ifcfg-ensXXX <br/>
 
@@ -14,3 +14,5 @@ NETMASK=255.255.255.0<br/>
 
 ### 재시작
 systemctl restart network<br/>
+
+# 3. SSH Key 생성
