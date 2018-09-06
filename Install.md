@@ -2,8 +2,9 @@
 - Centos7.2 <br/>
 
 # 2.Network설정
-fdsa <br/>
-- 설정
+vi /etc/sysconfig/network-scripts/ifcfg-ensXXX <br/>
+
+### 설정
 BOOTPROTO=nono<br/>
 ONBOOT=yes<br/>
 IPADDR=172.16.31.180<br/>
