@@ -115,7 +115,16 @@ baseurl=http://172.16.31.180/Centos7.2<br/>
 - pssh -h /root/allnodes "systemctl stop firewalld"<br/>
 - pssh -h /root/allnodes "systemctl disable firewalld"<br/>
 
-# 9. NTP설정
+# 9. Hosts설정
+- vi /etc/hosts<br/>
+====================<br/>
+172.16.31.180 node00.cluster.com<br/>
+172.16.31.181 node01.cluster.com<br/>
+172.16.31.182 node02.cluster.com<br/>
+====================<br/>
+- pscp -h /root/allnodes /etc/hosts /etc/hosts<br/>
+
+# 10. NTP설정
 - pssh -h /root/allnodes "yum install -y ntp"<br/>
 
 ### 다른 네트워크 설정
@@ -141,7 +150,7 @@ server 127.127.1.0<br/>
 ### 확인
 - clush -B -a "ntpq -pn"<br/>
 
-# 10. ulimit 설정
+# 11. ulimit 설정
 - vi /etc/security/limits.conf<br/>
 ====================<br/>
 root soft nofile 64000<br/>
@@ -152,7 +161,7 @@ root hard nofile 64000<br/>
 ### 확인
 - clush -B -a ulimit -n<br/>
 
-# 11. Transparent Hugepage Compaction 비활성화
+# 12. Transparent Hugepage Compaction 비활성화
 - pssh -h /root/allnodes "echo never > /sys/kernel/mm/transparent_hugepage/defrag"<br/>
 - pssh -h /root/allnodes "echo never > /sys/kernel/mm/transparent_hugepage/enabled"<br/>
 - vi /etc/default/grub<br/>
@@ -165,14 +174,14 @@ root hard nofile 64000<br/>
 ### 확인
 - cat /proc/meminfo<br/>
 
-# 12. vm.swappiness 설정
+# 13. vm.swappiness 설정
 - pssh -h /root/allnodes "sysctl -w vm.swappiness=1"<br/>
 - pssh -h /root/allnodes "sed -i '$ a\vm.swappiness=1' /etc/sysctl.conf"<br/>
 
-# 13. 재부팅
+# 14. 재부팅
 - pssh -h /root/allnodes "shutdown -r now"<br/>
 
-# 14. CM, CDH준비
+# 15. CM, CDH준비
 ### 다운로드
 - cm 파일 : http://archive.cloudera.com/cm5/redhat/7/x86_64/cm/5.15.0/RPMS/x86_64/<br/>
 - cdh 파일 : https://archive.cloudera.com/cdh5/parcels/latest/<br/>
@@ -195,7 +204,7 @@ enabled=1<br/>
 ### CDH
 - mkdir /var/www/html/CDH5.15<br/>
 
-# 15. Java 
+# 16. Java 
 ### 기존 JDK 삭제
 - pssh -h /root/allnodes "yum -y remove java"<br/>
 
@@ -212,7 +221,7 @@ export PATH=$JAVA_HOME/bin:$PATH<br/>
 ### 확인
 - clush -B -a "java -version"<br/>
 
-# 16. MariaDB 설치
+# 17. MariaDB 설치
 - yum -y install mariadb-server<br/>
 - systemctl restart mariadb<br/>
 - systemctl stop mariadb<br/>
@@ -261,7 +270,7 @@ grant all on hue.* to 'hue'@'%' identified by 'hue';<br/>
 flush privileges;<br/>
 ====================<br/>
 
-# 17. Cloudera Manager 패키지 설치
+# 18. Cloudera Manager 패키지 설치
 - pssh -h /root/allnodes "yum -y install cloudera-manager-daemons"<br/>
 - pssh -h /root/allnodes "yum -y install cloudera-manager-agent"<br/>
 - clush -B -a "rpm -qa | grep cloudera"<br/>
