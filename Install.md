@@ -176,3 +176,18 @@ root hard nofile 64000<br/>
 ### 다운로드
 - cm 파일 : http://archive.cloudera.com/cm5/redhat/7/x86_64/cm/5.15.0/RPMS/x86_64/<br/>
 - cdh 파일 : https://archive.cloudera.com/cdh5/parcels/latest/<br/>
+
+### CM repo생성
+- yum -y install createrepo<br/>
+- mkdir /var/www/html/CM5.15<br/>
+- createrepo /var/www/html/CM5.15<br/>
+- vi /etc/yum.repos.d/CM5.15.repo<br/>
+====================<br/>
+[CM5.15]<br/>
+name=cm5.15<br/>
+baseurl=http://172.16.31.180/CM5.15<br/>
+gpgcheck=0<br/>
+enabled=1<br/>
+====================<br/>
+- pscp -h /root/allnodes /etc/yum.repos.d/CM5.15.repo /etc/yum.repos.d/CM5.15.repo<br/>
+- pssh -h /root/allnodes "yum clean all"<br/>
