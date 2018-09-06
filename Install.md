@@ -20,4 +20,4 @@ systemctl restart network<br/>
 ssh-keygen<br/>
 
 ### Key
-for IP in {180..181}; do echo -n "$IP -> "; ssh-copy-id -i ~/.ssh/id_rsa.pub 172.16.31.$IP; done<br/>
+for IP in {180..182}; do echo -n "$IP -> "; ssh-copy-id -i ~/.ssh/id_rsa.pub 172.16.31.$IP; done<br/>
