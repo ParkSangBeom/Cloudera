@@ -164,3 +164,10 @@ root hard nofile 64000<br/>
 
 ### 확인
 - cat /proc/meminfo<br/>
+
+# 12. vm.swappiness 설정
+- pssh -h /root/allnodes "sysctl -w vm.swappiness=1"<br/>
+- pssh -h /root/allnodes "sed -i '$ a\vm.swappiness=1' /etc/sysctl.conf"<br/>
+
+# 13. 재부팅
+- pssh -h /root/allnodes "shutdown -r now"<br/>
