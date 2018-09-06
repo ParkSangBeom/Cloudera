@@ -69,6 +69,7 @@ ServerName 172.16.31.180:80<br/>
 SELINUX=disabled<br/>
 ====================<br/>
 - setenforce 0<br/>
+
 ### Firewall
 - systemctl stop firewalld<br/>
 - systemctl disable firewalld<br/>
