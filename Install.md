@@ -219,7 +219,7 @@ export PATH=$JAVA_HOME/bin:$PATH<br/>
 
 ### Log파일 백업
 - mkdir /var/lib/mysql/.bak<br/>
-- mv /var/lib/mysql/b_logfile* /var/lib/mysql/.bak<br/>
+- mv /var/lib/mysql/ib_logfile* /var/lib/mysql/.bak<br/>
 
 ### Option파일 설정
 - vi /etc/my.cnf<br/>
@@ -228,7 +228,11 @@ https://www.cloudera.com/documentation/enterprise/latest/topics/install_cm_maria
 이곳에서 확인<br/>
 ====================<br/>
 
-### 시작
+### DB시작
 - systemctl restart mariadb<br/>
 - systemctl enable mariadb<br/>
 - /usr/bin/mysql_secure_installation<br/>
+
+### JDBC설치
+JDBC
+- pscp -h /root/allnodes /var/www/html/JDBC/mysql-connector-java-5.1.47-bin.jar /usr/share/java/mysql-connector-java.jarC<br/>
