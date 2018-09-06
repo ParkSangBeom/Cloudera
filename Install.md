@@ -73,3 +73,7 @@ SELINUX=disabled<br/>
 ### Firewall
 - systemctl stop firewalld<br/>
 - systemctl disable firewalld<br/>
+
+# 7. Clush, Pssh설치
+- mkdir /var/www/html/Cluster<br/>
+- mkdir /var/www/html/Pssh<br/>
