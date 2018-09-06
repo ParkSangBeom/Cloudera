@@ -196,11 +196,11 @@ enabled=1<br/>
 - mkdir /var/www/html/CDH5.15<br/>
 
 # 15. Java준비
-### 기본 JDK 삭제
+### 기존 JDK 삭제
 - pssh -h /root/allnodes "yum -y remove java"<br/>
 
-### 기본 JDK 설치
-- pssh -h /root/allnodes "yum install oracle-*"<br/>
+### JDK 설치
+- pssh -h /root/allnodes "yum -y install oracle-*"<br/>
 - vi ~/.bashrc<br/>
 ====================<br/>
 export JAVA_HOME=/usr/java/jdk1.7.0_67-cloudera<br/>
@@ -209,5 +209,5 @@ export PATH=$JAVA_HOME/bin:$PATH<br/>
 - pscp -h /root/allnodes /root/.bashrc /root/.bashrc<br/>
 - pssh -h /root/allnodes "source /root/.bashrc"<br/>
 
-### 
+### 확인
 clush -B -a "java -version"
