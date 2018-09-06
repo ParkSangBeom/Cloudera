@@ -151,3 +151,13 @@ root hard nofile 64000<br/>
 
 ### 확인
 - clush -B -a ulimit -n<br/>
+
+# 11. Transparent Hugepage Compaction 비활성화
+- pssh -h /root/allnodes "echo never > /sys/kernel/mm/transparent_hugepage/defrag"<br/>
+- pssh -h /root/allnodes "echo never > /sys/kernel/mm/transparent_hugepage/enabled"<br/>
+- vi /etc/default/grub<br/>
+====================<br/>
+- GRUB_CMDLINE_LINUX="rd.lvm.lv=centos/root rd.lvm.lv=centos/swap crashkernel=auto rhgb quiet transparent_hugepage=never"<br/>
+====================<br/>
+- pscp -h /root/allnodes /etc/default/grub /etc/default/grub<br/>
+- pssh -h /root/allnodes "grub2-mkconfig -o /boot/grub2/grub.cfg"<br/>
