@@ -107,3 +107,9 @@ baseurl=http://172.16.31.180/Centos7.2<br/>
 ====================<br/>
 - pscp -h /root/allnodes /etc/yum.repos.d/Centos7.2.repo /etc/yum.repos.d/<br/>
 - pssh -h /root/allnodes "yum clean all"<br/>
+
+### SELinux, Firewall 설정
+- pscp -h /root/allnodes /etc/selinux/config /etc/selinux/config<br/>
+- pssh -h /root/allnodes "setenforce 0"<br/>
+- pssh -h /root/allnodes "systemctl stop firewalld"<br/>
+- pssh -h /root/allnodes "systemctl disable firewalld"<br/>
