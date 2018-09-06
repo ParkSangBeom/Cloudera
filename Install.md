@@ -98,6 +98,7 @@ all :172.16.31.[180-182]<br/>
 172.16.31.181<br/>
 172.16.31.182<br/>
 ====================<br/>
+
 # 8. 다른 네트워크 세팅
 ### Yum local repository 구축
 - pssh -h /root/datanodes "mkdir /etc/yum.repos.d/.bak; mv /etc/yum.repos.d/CentOS-* /etc/yum.repos.d/.bak"<br/>
@@ -113,3 +114,20 @@ baseurl=http://172.16.31.180/Centos7.2<br/>
 - pssh -h /root/allnodes "setenforce 0"<br/>
 - pssh -h /root/allnodes "systemctl stop firewalld"<br/>
 - pssh -h /root/allnodes "systemctl disable firewalld"<br/>
+
+# 9. NTP설정
+- pssh -h /root/allnodes "yum install -y ntp"<br/>
+
+### 다른 네트워크 설정
+- vi /etc/ntp.conf<br/>
+====================<br/>
+server 172.16.31.180<br/>
+====================<br/>
+
+### Main 설정
+- pscp -h /root/allnodes /etc/ntp.conf /etc/ntp.conf<br/>
+- vi /etc/ntp.conf<br/>
+====================<br/>
+server 127.127.1.0<br/>
+====================<br/>
+- pssh -h /root/allnodes "systemctl stop ntpd"<br/>
