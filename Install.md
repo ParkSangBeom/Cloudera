@@ -231,4 +231,4 @@ https://www.cloudera.com/documentation/enterprise/latest/topics/install_cm_maria
 ### 시작
 - systemctl restart mariadb<br/>
 - systemctl enable mariadb<br/>
--/usr/bin/mysql_secure_installation<br/>
+- /usr/bin/mysql_secure_installation<br/>
