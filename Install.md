@@ -78,6 +78,10 @@ SELINUX=disabled<br/>
 - cd /var/www/html/Cluster<br/>
 - yum -y install python2-clustershell-1.8-1.el7.noarch.rpm<br/>
 - yum -y install clustershell-1.8-1.el7.noarch.rpm<br/>
+- vi /etc/clustershell/groups<br/>
+====================<br/>
+all :172.16.31.[180-182]<br/>
+====================<br/>
 
 ### Pssh
 - mkdir /var/www/html/Pssh<br/>
