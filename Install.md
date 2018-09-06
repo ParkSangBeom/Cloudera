@@ -191,3 +191,6 @@ enabled=1<br/>
 ====================<br/>
 - pscp -h /root/allnodes /etc/yum.repos.d/CM5.15.repo /etc/yum.repos.d/CM5.15.repo<br/>
 - pssh -h /root/allnodes "yum clean all"<br/>
+
+### CDH
+mkdir /var/www/html/CDH5.15
