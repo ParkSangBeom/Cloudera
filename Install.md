@@ -43,3 +43,4 @@ baseurl=file:///var/www/html/Centos7.2<br/>
 gpgcheck=0<br/>
 enabled=1<br/>
 ====================<br/>
+- yum clean all<br/>
