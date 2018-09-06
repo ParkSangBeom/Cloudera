@@ -214,4 +214,4 @@ export PATH=$JAVA_HOME/bin:$PATH<br/>
 
 # 16. MariaDB 설치
 - yum -y install mariadb-server<br/>
-- systemctl stop mariadbd<br/>
+- systemctl stop mariadb<br/>
