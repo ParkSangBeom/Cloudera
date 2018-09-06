@@ -173,6 +173,6 @@ root hard nofile 64000<br/>
 - pssh -h /root/allnodes "shutdown -r now"<br/>
 
 # 14. Cloudera Install
-### 
+### 다운
 - cm 파일 : http://archive.cloudera.com/cm5/redhat/7/x86_64/cm/5.15.0/RPMS/x86_64/<br/>
 - cdh 파일 : https://archive.cloudera.com/cdh5/parcels/latest/<br/>
