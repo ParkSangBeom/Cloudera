@@ -284,7 +284,9 @@ flush privileges;<br/>
 
 ### Cloudera Manager Server 시작
 - pssh -h /root/allnodes "systemctl restart cloudera-scm-agent"<br/>
+- pssh -h /root/allnodes "systemctl enable cloudera-scm-agent"<br/>
 - systemctl restart cloudera-scm-server<br/>
+- systemctl enable cloudera-scm-server<br/>
 
 ### 확인
 - tail -f /var/log/cloudera-scm-server/cloudera-scm-server.log<br/>
