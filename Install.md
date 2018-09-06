@@ -271,6 +271,19 @@ flush privileges;<br/>
 ====================<br/>
 
 # 18. Cloudera Manager 패키지 설치
+### 설치
 - pssh -h /root/allnodes "yum -y install cloudera-manager-daemons"<br/>
 - pssh -h /root/allnodes "yum -y install cloudera-manager-agent"<br/>
 - clush -B -a "rpm -qa | grep cloudera"<br/>
+
+### Agent 설정
+- pssh -h /root/allnodes "sed -i 's/server_host=localhost/server_host=node00.cluster.com/g' /etc/cloudera-scm-agent/config.ini"<br/>
+- yum -y install cloudera-manager-server<br/>
+- /usr/share/cmf/schema/scm_prepare_database.sh mysql scm scm scm<br/>
+
+### Cloudera Manager Server 시작
+- pssh -h /root/allnodes "systemctl restart cloudera-scm-agent"<br/>
+- systemctl restart cloudera-scm-server<br/>
+
+### 확인
+- tail -f /var/log/cloudera-scm-server/cloudera-scm-server.log<br/>
