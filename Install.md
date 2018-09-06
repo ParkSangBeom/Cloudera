@@ -34,3 +34,12 @@ NETMASK=255.255.255.0<br/>
 ### repo파일 세팅
 - mkdir /etc/yum.repos.d/.bak<br/>
 - mv /etc/yum.repos.d/CentOS-* /etc/yum.repos.d/.bak/<br/>
+- vi /etc/yum.repos.d/Centos7.2.repo<br/>
+====================<br/>
+[Centos7.2]
+name=centos7.2
+#baseurl=http://172.16.31.180/Centos7.2
+baseurl=file:///var/www/html/Centos7.2
+gpgcheck=0
+enabled=1
+====================<br/>
