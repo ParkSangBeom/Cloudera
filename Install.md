@@ -239,3 +239,24 @@ https://www.cloudera.com/documentation/enterprise/latest/topics/install_cm_maria
 
 ### Table생성
 - mysql -u root -p<br/>
+====================<br/>
+create database scm DEFAULT CHARACTER SET utf8;<br/>
+grant all on scm.* TO 'scm'@'%' IDENTIFIED BY 'scm';<br/>
+create database amon DEFAULT CHARACTER SET utf8;<br/>
+grant all on amon.* TO 'amon'@'%' IDENTIFIED BY 'amon';<br/>
+create database rman DEFAULT CHARACTER SET utf8;<br/>
+grant all on rman.* TO 'rman'@'%' IDENTIFIED BY 'rman';<br/>
+create database metastore DEFAULT CHARACTER SET utf8;<br/>
+grant all on metastore.* TO 'hive'@'%' IDENTIFIED BY 'hive';<br/>
+create database nav DEFAULT CHARACTER SET utf8;<br/>
+grant all on nav.* TO 'nav'@'%' IDENTIFIED BY 'nav';<br/>
+create database navms DEFAULT CHARACTER SET utf8;<br/>
+grant all on navms.* TO 'navms'@'%' IDENTIFIED BY 'navms';<br/>
+create database sentry DEFAULT CHARACTER SET utf8;<br/>
+grant all on sentry.* TO 'sentry'@'%' IDENTIFIED BY 'sentry';<br/>
+create database oozie DEFAULT CHARACTER SET utf8;<br/>
+grant all on oozie.* TO 'oozie'@'%' IDENTIFIED BY 'oozie';<br/>
+create database hue DEFAULT CHARACTER SET utf8 ;<br/>
+grant all on hue.* to 'hue'@'%' identified by 'hue';<br/>
+flush privileges;<br/>
+====================<br/>
