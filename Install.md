@@ -123,11 +123,17 @@ baseurl=http://172.16.31.180/Centos7.2<br/>
 ====================<br/>
 server 172.16.31.180<br/>
 ====================<br/>
+- pscp -h /root/allnodes /etc/ntp.conf /etc/ntp.conf<br/>
 
 ### Main 설정
-- pscp -h /root/allnodes /etc/ntp.conf /etc/ntp.conf<br/>
 - vi /etc/ntp.conf<br/>
 ====================<br/>
 server 127.127.1.0<br/>
 ====================<br/>
 - pssh -h /root/allnodes "systemctl stop ntpd"<br/>
+
+### Syncronize the time 설정
+- systemctl restart ntpd<br/>
+- pssh -h /root/datanodes "ntpdate 172.16.31.180"
+- pssh -h /root/datanodes "systemctl restart ntpd"<br/>
+- pssh -h /root/allnodes "systemctl enable ntpd"<br/>
