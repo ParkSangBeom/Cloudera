@@ -234,5 +234,7 @@ https://www.cloudera.com/documentation/enterprise/latest/topics/install_cm_maria
 - /usr/bin/mysql_secure_installation<br/>
 
 ### JDBC설치
-JDBC
 - pscp -h /root/allnodes /var/www/html/JDBC/mysql-connector-java-5.1.47-bin.jar /usr/share/java/mysql-connector-java.jarC<br/>
+
+### Table생성.
+- mysql -u root -p<br/>
