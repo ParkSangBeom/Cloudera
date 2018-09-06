@@ -19,5 +19,10 @@ systemctl restart network<br/>
 ### Key생성
 ssh-keygen<br/>
 
-### Key
+### Key복사
 for IP in {180..182}; do echo -n "$IP -> "; ssh-copy-id -i ~/.ssh/id_rsa.pub 172.16.31.$IP; done<br/>
+
+# 4. Yum local repository 구축
+### DVD Mount
+mkdir /media/cdrom<br/>
+mount /dev/cdrom /media/cdrom/<br/>
