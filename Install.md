@@ -16,3 +16,5 @@ NETMASK=255.255.255.0<br/>
 systemctl restart network<br/>
 
 # 3. SSH Key 생성
+ssh-keygen<br/>
+for IP in {180..181}; do echo -n "$IP -> "; ssh-copy-id -i ~/.ssh/id_rsa.pub 172.16.31.$IP; done<br/>
