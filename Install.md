@@ -77,6 +77,11 @@ SELINUX=disabled<br/>
 # 7. Clush, Pssh설치
 ### Cluster
 - mkdir /var/www/html/Cluster<br/>
+- cd /var/www/html/Cluster<br/>
+- yum -y install python2-clustershell-1.8-1.el7.noarch.rpm<br/>
+- yum -y install clustershell-1.8-1.el7.noarch.rpm<br/>
 
 ### Pssh
 - mkdir /var/www/html/Pssh<br/>
+- cd /var/www/html/Pssh<br/>
+- python setup.py install<br/>
