@@ -25,8 +25,12 @@ NETMASK=255.255.255.0<br/>
 - for IP in {180..182}; do echo -n "$IP -> "; ssh-copy-id -i ~/.ssh/id_rsa.pub 172.16.31.$IP; done<br/>
 
 # 4. Yum local repository 구축
-### Centos Package 파일준비
+### Centos Package 파일복사
 - mkdir -p /var/www/html/Centos7.2<br/>
 - mkdir /media/cdrom<br/>
 - mount /dev/cdrom /media/cdrom/<br/>
 - cp -r /media/cdrom/* /var/www/html/Centos7.2/<br/>
+
+### repo파일 세팅
+- mkdir /etc/yum.repos.d/.bak<br/>
+- mv /etc/yum.repos.d/CentOS-* /etc/yum.repos.d/.bak/<br/>
