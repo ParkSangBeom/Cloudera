@@ -47,8 +47,11 @@ enabled=1<br/>
 ====================<br/>
 - yum clean all<br/>
 
-# 4. Http 데몬 설치
+# 5. Http 데몬 설치
+### 설치
 - yum -y install httpd
+
+### 세팅
 - vi /etc/httpd/conf/httpd.conf<br/>
 ====================<br/>
 ServerName 172.16.31.30:80<br/>
