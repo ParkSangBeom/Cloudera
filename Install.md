@@ -54,6 +54,6 @@ enabled=1<br/>
 ### 세팅
 - vi /etc/httpd/conf/httpd.conf<br/>
 ====================<br/>
-ServerName 172.16.31.30:80<br/>
+ServerName 172.16.31.180:80<br/>
 ====================<br/>
 - chcon -R -t httpd_sys_content_t /var/www/html/Centos7.2<br/>
