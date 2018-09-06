@@ -193,4 +193,14 @@ enabled=1<br/>
 - pssh -h /root/allnodes "yum clean all"<br/>
 
 ### CDH
-mkdir /var/www/html/CDH5.15
+- mkdir /var/www/html/CDH5.15<br/>
+
+# 15. Java준비
+### 기본 JDK 삭제
+- pssh -h /root/allnodes "yum -y remove java"<br/>
+- pssh -h /root/allnodes "yum install oracle-*"<br/>
+- vi ~/.bashrc<br/>
+====================<br/>
+export JAVA_HOME=/usr/java/jdk1.7.0_67-cloudera<br/>
+export PATH=$JAVA_HOME/bin:$PATH<br/>
+====================<br/>
