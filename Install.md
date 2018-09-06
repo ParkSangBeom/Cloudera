@@ -80,7 +80,7 @@ SELINUX=disabled<br/>
 - yum -y install clustershell-1.8-1.el7.noarch.rpm<br/>
 - vi /etc/clustershell/groups<br/>
 ====================<br/>
-all :172.16.31.[180-182]<br/>
+all: 172.16.31.[180-182]<br/>
 ====================<br/>
 
 ### Pssh
