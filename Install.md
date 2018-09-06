@@ -64,9 +64,9 @@ ServerName 172.16.31.180:80<br/>
 
 # 6. SELinux, Firewall 설정
 ### SELinux
-- vi /etc/selinux/config
+- vi /etc/selinux/config<br/>
 ====================<br/>
-SELINUX=disabled
+SELINUX=disabled<br/>
 ====================<br/>
 - setenforce 0<br/>
 ### Firewall
