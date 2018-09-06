@@ -137,3 +137,18 @@ server 127.127.1.0<br/>
 - pssh -h /root/datanodes "ntpdate 172.16.31.180"
 - pssh -h /root/datanodes "systemctl restart ntpd"<br/>
 - pssh -h /root/allnodes "systemctl enable ntpd"<br/>
+
+### 확인
+- clush -B -a "ntpq -pn"<br/>
+
+# 10. ulimit 설정
+- vi /etc/security/limits.conf<br/>
+====================<br/>
+- 추가
+- root soft nofile 64000<br/>
+- root hard nofile 64000<br/>
+====================<br/>
+- pscp -h /root/allnodes /etc/security/limits.conf /etc/security/limits.conf<br/>
+
+### 확인
+- clush -B -a ulimit -n<br/>
