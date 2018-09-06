@@ -4,8 +4,6 @@ Centos7.2 <br/>
 # 2. Network설정
 ### 파일
 - vi /etc/sysconfig/network-scripts/ifcfg-ensXXX <br/>
-
-### 설정
 ====================<br/>
 BOOTPROTO=none<br/>
 ONBOOT=yes<br/>
