@@ -61,3 +61,14 @@ ServerName 172.16.31.180:80<br/>
 ### 서비스 시작
 - systemctl restart httpd<br/>
 - systemctl enable httpd<br/>
+
+# 6. SELinux, Firewall 설정
+### SELinux
+- vi /etc/selinux/config
+====================<br/>
+SELINUX=disabled
+====================<br/>
+- setenforce 0<br/>
+### Firewall
+- systemctl stop firewalld<br/>
+- systemctl disable firewalld<br/>
