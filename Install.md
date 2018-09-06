@@ -31,9 +31,11 @@ NETMASK=255.255.255.0<br/>
 - mount /dev/cdrom /media/cdrom/<br/>
 - cp -r /media/cdrom/* /var/www/html/Centos7.2/<br/>
 
-### repo파일 세팅
+### 기존 repo파일 백업
 - mkdir /etc/yum.repos.d/.bak<br/>
 - mv /etc/yum.repos.d/CentOS-* /etc/yum.repos.d/.bak/<br/>
+
+### Centos repo파일 생성
 - vi /etc/yum.repos.d/Centos7.2.repo<br/>
 ====================<br/>
 [Centos7.2]<br/>
