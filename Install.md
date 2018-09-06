@@ -214,4 +214,21 @@ export PATH=$JAVA_HOME/bin:$PATH<br/>
 
 # 16. MariaDB 설치
 - yum -y install mariadb-server<br/>
+- systemctl restart mariadb<br/>
 - systemctl stop mariadb<br/>
+
+### Log파일 백업
+- mkdir /var/lib/mysql/.bak<br/>
+- mv /var/lib/mysql/b_logfile* /var/lib/mysql/.bak<br/>
+
+### Option파일 설정
+- vi /etc/my.cnf<br/>
+====================<br/>
+https://www.cloudera.com/documentation/enterprise/latest/topics/install_cm_mariadb.html<br/>
+이곳에서 확인<br/>
+====================<br/>
+
+### 시작
+- systemctl restart mariadb<br/>
+- systemctl enable mariadb<br/>
+-/usr/bin/mysql_secure_installation<br/>
