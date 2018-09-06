@@ -99,4 +99,10 @@ all :172.16.31.[180-182]<br/>
 172.16.31.182<br/>
 ====================<br/>
 # 8. 다른 네트워크 세팅
-
+### Yum local repository 구축
+- pssh -h /root/datanodes "mkdir /etc/yum.repos.d/.bak; mv /etc/yum.repos.d/CentOS-* /etc/yum.repos.d/.bak"<br/>
+- vi /etc/yum.repos.d/Centos7.2.repo<br/>
+====================<br/>
+baseurl=http://172.16.31.180/Centos7.2<br/>
+====================<br/>
+- pscp -h /root/allnodes /etc/yum.repos.d/Centos7.2.repo /etc/yum.repos.d/
