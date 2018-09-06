@@ -46,3 +46,11 @@ gpgcheck=0<br/>
 enabled=1<br/>
 ====================<br/>
 - yum clean all<br/>
+
+### Http 데몬 설치
+- yum -y install httpd
+- vi /etc/httpd/conf/httpd.conf<br/>
+====================<br/>
+ServerName 172.16.31.30:80<br/>
+====================<br/>
+- chcon -R -t httpd_sys_content_t /var/www/html/Centos7.2<br/>
