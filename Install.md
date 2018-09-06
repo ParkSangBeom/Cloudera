@@ -105,4 +105,5 @@ all :172.16.31.[180-182]<br/>
 ====================<br/>
 baseurl=http://172.16.31.180/Centos7.2<br/>
 ====================<br/>
-- pscp -h /root/allnodes /etc/yum.repos.d/Centos7.2.repo /etc/yum.repos.d/
+- pscp -h /root/allnodes /etc/yum.repos.d/Centos7.2.repo /etc/yum.repos.d/<br/>
+- pssh -h /root/allnodes "yum clean all"<br/>
