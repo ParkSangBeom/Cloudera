@@ -195,7 +195,7 @@ enabled=1<br/>
 ### CDH
 - mkdir /var/www/html/CDH5.15<br/>
 
-# 15. Java준비
+# 15. Java 
 ### 기존 JDK 삭제
 - pssh -h /root/allnodes "yum -y remove java"<br/>
 
@@ -210,4 +210,8 @@ export PATH=$JAVA_HOME/bin:$PATH<br/>
 - pssh -h /root/allnodes "source /root/.bashrc"<br/>
 
 ### 확인
-clush -B -a "java -version"
+- clush -B -a "java -version"<br/>
+
+# 16. MariaDB 설치
+- yum -y install mariadb-server<br/>
+- systemctl stop mariadbd<br/>
