@@ -9,4 +9,5 @@ sqoop import-all-tables --connect jdbc:mysql://172.16.31.180:3306/hive_schema --
 sqoop import --connect jdbc:mysql://172.16.31.180:3306/hive_schema --username root --password root --query 'SELECT id, name FROM hive_table1 WHERE age > 50 AND $CONDITIONS' --target-dir /user/root/abcd --split-by id</br>
 
 # 2. Sqoop to Hive
-### 1. test
+### 1. 테이블 자동 만들기
+sqoop import --connect  jdbc:mysql://172.16.31.180:3306/hive_schema --username root --password root --table test1 --hive-import</br>
