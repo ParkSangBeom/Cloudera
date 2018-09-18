@@ -165,6 +165,7 @@ root hard nofile 64000<br/>
 # 12. Transparent Hugepage Compaction 비활성화
 - pssh -h /root/allnodes "echo never > /sys/kernel/mm/transparent_hugepage/defrag"<br/>
 - pssh -h /root/allnodes "echo never > /sys/kernel/mm/transparent_hugepage/enabled"<br/>
+- chmod +x /etc/rc.d/rc.local<br/>
 - vi /etc/default/grub<br/>
 ====================<br/>
 - GRUB_CMDLINE_LINUX="rd.lvm.lv=centos/root rd.lvm.lv=centos/swap crashkernel=auto rhgb quiet transparent_hugepage=never"<br/>
