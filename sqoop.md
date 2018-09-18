@@ -11,3 +11,6 @@ sqoop import --connect jdbc:mysql://172.16.31.180:3306/hive_schema --username ro
 # 2. Sqoop to Hive
 ### 1. 특정 테이블
 sqoop import --connect  jdbc:mysql://172.16.31.180:3306/hive_schema --username root --password root --table test1 --hive-import</br>
+
+### 2. 테이블 이름 정하기.
+sqoop import --connect  jdbc:mysql://172.16.31.180:3306/test_schema --username root --password root --table test2 --hive-import --create-hive-table --hive-table default.custom
