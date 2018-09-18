@@ -18,8 +18,12 @@ hadoop fs -chmod -R 775 /user/flume</br>
 Cloudera Manager 접속</br>
 flume ->  Configuration -> Configuration File</br>
 ====================================</br>
-tier1.sinks.sink1.type= HDFS
-tier1.sinks.sink1.fileType=DataStream
-tier1.sinks.sink1.channel      = channel1
-tier1.sinks.sink1.hdfs.path = /user/flume/event
+tier1.sinks.sink1.type= HDFS</br>
+tier1.sinks.sink1.fileType=DataStream</br>
+tier1.sinks.sink1.channel      = channel1</br>
+tier1.sinks.sink1.hdfs.path = /user/flume/event</br>
 ====================================</br>
+</br>
+Telnet localhost 9999</br>
+Hello world!</br>
+hadoop fs -ls /user/flume/event/*</br>
