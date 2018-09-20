@@ -40,14 +40,14 @@ agentDataSource.sources.otvSource.channels = otvChannel</br>
 agentDataSource.sources.otvSource.bind     = 127.0.0.1</br>
 agentDataSource.sources.otvSource.port     = 9999</br>
 </br> 
-# Sink : Avro</br>
+\# Sink : Avro</br>
 agentDataSource.sinks.avroSink.serializer = AVRO_EVENT</br>
 agentDataSource.sinks.avroSink.type = avro</br>
 agentDataSource.sinks.avroSink.channel = otvChannel</br>
 agentDataSource.sinks.avroSink.hostname = 172.16.31.181</br>
 agentDataSource.sinks.avroSink.port = 10000</br>
 </br> 
-# Channel : Memory</br>
+\# Channel : Memory</br>
 agentDataSource.channels.otvChannel.type = memory</br>
 agentDataSource.channels.otvChannel.capacity = 100</br>
 ====================================</br>
@@ -58,7 +58,7 @@ agentDataCollector.sources = targetSource</br>
 agentDataCollector.channels = targetChannel</br>
 agentDataCollector.sinks = targetSink</br>
 </br>
-# Source : Avro</br>
+\# Source : Avro</br>
 agentDataCollector.sources.targetSource.type = avro</br>
 agentDataCollector.sources.targetSource.channels = targetChannel</br>
 agentDataCollector.sources.targetSource.bind = 172.16.31.181</br>
@@ -67,7 +67,7 @@ agentDataCollector.sources.targetSource.port = 10000</br>
 agentDataCollector.sinks.targetSink.type         = logger</br>
 agentDataCollector.sinks.targetSink.channel      = targetChannel</br>
 </br>
-# Channel : Memory</br>
+\# Channel : Memory</br>
 agentDataCollector.channels.targetChannel.type = memory</br>
 agentDataCollector.channels.targetChannel.capacity = 100</br>
 ====================================</br>
