@@ -30,6 +30,7 @@ hadoop fs -ls /user/flume/event/*</br>
 
 ### 2. Avro 전송.
 - 보내는 Server</br>
+</br>
 ====================================</br>
 agentDataSource.sources = otvSource</br>
 agentDataSource.channels = otvChannel</br>
@@ -53,11 +54,8 @@ agentDataSource.channels.otvChannel.type = memory</br>
 agentDataSource.channels.otvChannel.capacity = 100</br>
 ====================================</br>
 </br>
-</br>
-</br>
-</br>
-</br>
 - 받는 Server</br>
+</br>
 ====================================</br>
 agentDataCollector.sources = targetSource</br>
 agentDataCollector.channels = targetChannel</br>
