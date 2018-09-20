@@ -34,7 +34,7 @@ agentDataSource.sources = otvSource</br>
 agentDataSource.channels = otvChannel</br>
 agentDataSource.sinks = avroSink</br>
 </br> 
-# Source : Spooling Directory</br>
+/# Source : Spooling Directory</br>
 agentDataSource.sources.otvSource.type = netcat</br>
 agentDataSource.sources.otvSource.channels = otvChannel</br>
 agentDataSource.sources.otvSource.bind     = 127.0.0.1</br>
