@@ -1,6 +1,6 @@
 # Flume 사용법
 
-### 1. Local 전송.
+### 1. HDFS 전송.
 yum install telnet</br>
 Telnet localhost 9999</br>
 Hello world!</br>
