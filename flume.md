@@ -73,3 +73,5 @@ agentDataCollector.channels.targetChannel.type = memory</br>
 agentDataCollector.channels.targetChannel.capacity = 100</br>
 ====================================</br>
 
+
+https://flume.apache.org/FlumeUserGuide.html</br>
